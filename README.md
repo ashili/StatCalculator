@@ -1,0 +1,2 @@
+# StatCalculator
+Statistic Calculator.
