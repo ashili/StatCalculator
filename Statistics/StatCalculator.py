@@ -8,8 +8,10 @@ def isEven(num):
 
 
 class StatCalc(Calculator):
+    data = []
+
     def __init__(self):
-        super()
+        super().__init__()
 
     def median(self, nums):
         nums.sort()
@@ -19,10 +21,10 @@ class StatCalc(Calculator):
             r = (nums[len(nums) / 2] + nums[(len(nums) / 2) - 1]) / 2.00
         return float(r)
 
-    def mean(self,nums):
+    def mean(self, nums):
         return sum(nums) / float(len(nums))
 
-    def mode(self,nums):
+    def mode(self, nums):
         if len(nums) == 0:
             return 0
 
