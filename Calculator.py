@@ -1,24 +1,9 @@
 import math
-
-
-def addition(a, b):
-    return a + b
-
-
-def subtraction(a, b):
-    return a - b
-
-
-def multiplication(a, b):
-    return a * b
-
-
-def division(a, b):
-    return a / b
-
-
-def squared(a):
-    return a * a
+from basicMath.Addition import addition
+from basicMath.Division import division
+from basicMath.Multiplication import multiplication
+from basicMath.Squared import squared
+from basicMath.Substraction import subtraction
 
 
 class Calculator:
