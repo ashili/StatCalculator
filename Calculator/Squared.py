@@ -1,2 +1,2 @@
 def squared(a):
-    return a * a
+    return float(a) * float(a)
