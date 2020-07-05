@@ -1,8 +1,9 @@
 import Calculator
+import math
 
 
 def mean(nums):
-    return sum(nums) / nums
+    return sum(nums) / float(len(nums))
 
 
 def isEven(num):
@@ -11,6 +12,7 @@ def isEven(num):
 
 
 def median(nums):
+    nums.sort()
     if isEven(len(nums) + 1):
         r = nums[len(nums) / 2]
     else:
@@ -28,9 +30,18 @@ def mode(nums):
             d[item] += 1
         else:
             d[item] = 1
-
+    # TODO: fix the highest number in d (f)
     f = max(d, key=d.get)
     return f
+
+
+def variance(nums):
+    total = 0
+    m = mean(nums)
+    for i in nums:
+        total += ((i - m) * (i - m))
+    c = total / len(nums)
+    return c
 
 
 class StatCalc(Calculator):
