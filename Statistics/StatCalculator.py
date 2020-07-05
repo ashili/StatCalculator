@@ -7,6 +7,12 @@ from Statistics.Variance import variance
 from Statistics.ZScore import zScore
 from Statistics.Median import median
 from Statistics.StdDev import stdDev
+from Statistics.SimpleRandomSample import simpleRandomSample
+from Statistics.ConfidenceInterval import confidenceInterval
+from Statistics.MarginOfError import marginOfError
+from Statistics.CochranSampleSize import cochranSampleSize
+from Statistics.SampleSize import sampleSize
+from Statistics.Randoms import randomRange, randomRangeSeed, randomList, randomListItem
 
 
 class Statistics(Calculator):
