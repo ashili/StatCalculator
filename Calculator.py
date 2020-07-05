@@ -1,9 +1,9 @@
 import math
-from basicMath.Addition import addition
-from basicMath.Division import division
-from basicMath.Multiplication import multiplication
-from basicMath.Squared import squared
-from basicMath.Substraction import subtraction
+from Calculator.Addition import addition
+from Calculator.Division import division
+from Calculator.Multiplication import multiplication
+from Calculator.Squared import squared
+from Calculator.Substraction import subtraction
 
 
 class Calculator:
