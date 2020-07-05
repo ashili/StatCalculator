@@ -1,10 +1,9 @@
-import Calculator
-import math
+from Calculator.Calculator import Calculator
+from Statistics.Mean import mean
+from Statistics.SampleMean import sample_mean
 
 
-def isEven(num):
-    if (num % 2) == 0:
-        return True
+
 
 
 class StatCalc(Calculator):
@@ -13,16 +12,7 @@ class StatCalc(Calculator):
     def __init__(self):
         super().__init__()
 
-    def median(self, nums):
-        nums.sort()
-        if isEven(len(nums) + 1):
-            r = nums[len(nums) / 2]
-        else:
-            r = (nums[len(nums) / 2] + nums[(len(nums) / 2) - 1]) / 2.00
-        return float(r)
 
-    def mean(self, nums):
-        return sum(nums) / float(len(nums))
 
     def mode(self, nums):
         if len(nums) == 0:
