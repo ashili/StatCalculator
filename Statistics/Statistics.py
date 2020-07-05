@@ -18,8 +18,8 @@ from Statistics.Randoms import randomRange, randomRangeSeed, randomList, randomL
 class Statistics(Calculator):
     data = []
 
-    def __init__(self, filepath):
-        self.data = CsvReader(filepath)
+    def __init__(self):
+        self.data = CsvReader()
         super().__init__()
 
     def mean(self):
