@@ -1,7 +1,7 @@
 import unittest
 from numpy.random import seed
 from numpy.random import randint
-from Statistics.StatCalculator import Statistics
+from Statistics.Statistics import Statistics
 import pprint
 
 
