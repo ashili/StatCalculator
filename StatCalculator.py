@@ -44,6 +44,10 @@ def variance(nums):
     return c
 
 
+def stdDev(nums):
+    return math.sqrt(variance(nums))
+
+
 class StatCalc(Calculator):
     def __init__(self):
         super()
