@@ -12,7 +12,7 @@ from Statistics.ConfidenceInterval import confidenceInterval
 from Statistics.MarginOfError import marginOfError
 from Statistics.CochranSampleSize import cochranSampleSize
 from Statistics.SampleSize import sampleSize
-from Statistics.Randoms import randomRange, randomRangeSeed, randomList, randomListItem
+from Statistics.Randoms import randomRange, randomRangeSeed, randomList, randomListItem, randomListItemMultiple, randomListItemSeedMultiple
 
 
 class Statistics(Calculator):
