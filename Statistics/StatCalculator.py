@@ -1,44 +1,45 @@
 from Calculator.Calculator import Calculator
 from Statistics.Mean import mean
 from Statistics.SampleMean import sample_mean
+from CsvReader.CsvReader import CsvReader
+from Statistics.Mode import mode
+from Statistics.Variance import variance
+from Statistics.ZScore import zScore
+from Statistics.Median import median
+from Statistics.StdDev import stdDev
 
 
-
-
-
-class StatCalc(Calculator):
+class Statistics(Calculator):
     data = []
 
-    def __init__(self):
+    def __init__(self, filepath):
+        self.data = CsvReader(filepath)
         super().__init__()
 
+    def mean(self):
+        self.result = mean(self.data)
+        return self.result
 
+    def sample_mean(self, sample_size):
+        self.result = sample_mean(self.data, sample_size)
+        return self.result
 
-    def mode(self, nums):
-        if len(nums) == 0:
-            return 0
+    def median(self):
+        self.result = median(self.data)
+        return self.result
 
-        d = dict()
-        for item in nums:
-            if item in d:
-                d[item] += 1
-            else:
-                d[item] = 1
-        # TODO: fix the highest number in d (f)
-        f = max(d, key=d.get)
-        return f
+    def mode(self):
+        self.result = mode(self.data)
+        return self.result
 
-    def variance(self, nums):
-        total = 0
-        m = self.mean(nums)
-        for i in nums:
-            total += ((i - m) * (i - m))
-        c = total / len(nums)
-        return c
+    def variance(self):
+        self.result = variance(self.data)
+        return self.result
 
-    def stdDev(self, nums):
-        return math.sqrt(self.variance(nums))
+    def z_score(self):
+        self.result = zScore(self.data)
+        return self.result
 
-    def zScore(self, num, nums):
-        z = (float(num) - self.mean(nums)) / self.stdDev(nums)
-        return z
+    def std_dev(self):
+        self.result = stdDev(self.data)
+        return self.result
