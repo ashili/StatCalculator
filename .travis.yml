@@ -1,0 +1,12 @@
+language: python
+python:
+  -"3.8"
+install:
+  - pip install -r requirements.txt
+#Commands to run test
+script:
+  - python -m unitest discover -s Tests
+branches:
+  only:
+    - master
+    - development
