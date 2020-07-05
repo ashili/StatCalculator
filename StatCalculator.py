@@ -48,6 +48,11 @@ def stdDev(nums):
     return math.sqrt(variance(nums))
 
 
+def zScore(num, nums):
+    z = (float(num) - mean(nums))/stdDev(nums)
+    return z
+
+
 class StatCalc(Calculator):
     def __init__(self):
         super()
