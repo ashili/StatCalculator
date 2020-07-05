@@ -21,4 +21,12 @@ def randomListItem(list1):
     return result
 
 
+def randomListItemMultiple(self, list1, selectAmount):
+    result = random.choices(list1, k=selectAmount)
+    return result
 
+
+def randomListItemSeedMultiple(self, list1, seed, selectAmount):
+    random.seed(seed)
+    result = random.choices(list1, k=selectAmount)
+    return result
