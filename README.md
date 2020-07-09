@@ -1,5 +1,5 @@
 ## Stats Calculator Project - By Anis Shili and Maksim Nizhegorodtsev
-
+[![Build Status](https://travis-ci.org/ashili/StatCalculator.svg?branch=master)](https://travis-ci.org/ashili/StatCalculator)
 ##### Project Outline
 
 1. Calculator Object
